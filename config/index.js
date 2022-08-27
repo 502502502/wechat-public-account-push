@@ -15,10 +15,8 @@ export const config = {
     // 所在城市
     city: "钦州",
     // 生日，修改名字为对应需要显示的名字，如果生日为农历， type为 r
-    birthdays: [
-      {"name": "小姑娘", "year": "2000", "date": "10-20", "type": 'new'},
-      {"name": "小伙", "year": "2001", "date": "05-06", "type": 'new'},
-    ],
+    birthdaygirl: {"name": "小姑娘", "year": "2000", "date": "10-20", "type": 'new'},
+    birthdayboy: {"name": "小伙", "year": "2001", "date": "05-06", "type": 'new'},
     // 在一起的日子，格式同上
     loveDate: "2021-12-16",
     // 结婚纪念日
