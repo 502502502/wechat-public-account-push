@@ -109,23 +109,34 @@ import dayjs from 'dayjs'
  */
  export const getBirthdayMessage = () => {
     // 计算生日倒数
-    const birthdayList = config.birthdays
+    const birthdaygirl = config.birthdaygirl
+    const birthdayboy = config.birthdaygirl
     let resMessage = ''
-    birthdayList.forEach(birthday => {
-        let birthdayMessage = null
-        // 获取距离下次生日的时间
-        const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')
+    let birthdayMessagegirl = null
+    let birthdayMessageboy = null
+    // 获取girl距离下次生日的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthdaygirl.date).diff(dayjs(), 'day')
         
-        if (nextBir === 0) {
-            birthdayMessage = `今天是 ${birthday.name} 生日哦，祝${birthday.name}生日快乐！`
-        } else if (nextBir > 0 ) {
-            birthdayMessage = `距离 ${birthday.name} 的生日还有${nextBir}天`
-        }
-        // 存储数据
-        if (birthdayMessage) {
-            resMessage += `${birthdayMessage} \n`
-        }
-    })
+    if (nextBir === 0) {
+        birthdayMessagegirl = `今天是 ${birthdaygirl.name} 生日哦，祝${birthdaygirl.name}生日快乐！`
+    } else if (nextBir > 0 ) {
+        birthdayMessagegirl = `距离 ${birthdaygirl.name} 的生日还有${nextBir}天`
+    }
+     // 获取boy距离下次生日的时间
+     const nextBirboy = dayjs(dayjs().format('YYYY') + '-' + birthdayboy.date).diff(dayjs(), 'day')
+        
+     if (nextBirboy === 0) {
+         birthdayMessageboy = `今天是 ${birthdayboy.name} 生日哦，祝${birthdayboy.name}生日快乐！`
+     } else if (nextBir > 0 ) {
+         birthdayMessageboy = `距离 ${birthdayboy.name} 的生日还有${nextBirboy}天`
+     }
+    // 存储数据
+    if (birthdayMessagegirl) {
+        resMessage += `${birthdayMessagegirl} \n`
+    }
+    if (birthdayMessageboy) {
+        resMessage += `${birthdayMessageboy} \n`
+    }
 
     return resMessage
 }
