@@ -131,6 +131,31 @@ import dayjs from 'dayjs'
 }
 
 /**
+ * 获取考研信息
+ * @returns 
+ */
+ export const getKaoyanMessage = () => {
+    // 计算倒数
+    const kaoyanDate = config.kaoyanDate
+    let resMessage = ''
+    let kaoyandayMessage = null
+    // 获取距离考研的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
+        
+    if (nextBir === 0) {
+        kaoyandayMessage = `今天要 ${kaoyanDate.name} 考研哦，祝${kaoyanDate.name}旗开得胜！`
+    } else if (nextBir > 0 ) {
+        kaoyandayMessage = `距离 ${kaoyanDate.name} 考研还有${nextBir}天，加油加油！`
+    }
+    // 存储数据
+    if (kaoyandayMessage) {
+        resMessage += `${kaoyandayMessage} \n`
+    }
+
+    return resMessage
+}
+
+/**
  * 发送消息模板
  * @param {*} accessToken 
  * @param {*} user 
