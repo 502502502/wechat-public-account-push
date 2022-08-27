@@ -32,6 +32,8 @@ const main = async () => {
     const marryDay = dayjs().diff(dayjs(config.marryDate), 'day')
     // 获取生日信息
     const birthdayMessage = getBirthdayMessage()
+    // 获取考研信息
+    const kaoyanMessage = getKaoyanMessage()
 
 
     // 集成所需信息
@@ -48,6 +50,7 @@ const main = async () => {
         { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
         { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
+        { name: toLowerLine('kaoyanMessage'), value: kaoyanMessage, color: getColor() },
         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
     ]
