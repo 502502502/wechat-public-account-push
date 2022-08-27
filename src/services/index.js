@@ -110,7 +110,7 @@ import dayjs from 'dayjs'
  export const getBirthdayMessage = () => {
     // 计算生日倒数
     const birthdaygirl = config.birthdaygirl
-    const birthdayboy = config.birthdaygirl
+    const birthdayboy = config.birthdayboy
     let resMessage = ''
     let birthdayMessagegirl = null
     let birthdayMessageboy = null
