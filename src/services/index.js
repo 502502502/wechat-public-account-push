@@ -115,10 +115,7 @@ import dayjs from 'dayjs'
     let birthdayMessagegirl = null
     let birthdayMessageboy = null
     // 获取girl距离下次生日的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthdaygirl.date).diff(dayjs(), 'day')
-    if(nextBir < 0){
-        nextBir += 365
-    } 
+    const nextBir = (dayjs(dayjs().format('YYYY') + '-' + birthdaygirl.date).diff(dayjs(), 'day') + 365)%365
         
     if (nextBir === 0) {
         birthdayMessagegirl = `今天是 ${birthdaygirl.name} 生日哦，祝${birthdaygirl.name}生日快乐！`
@@ -126,7 +123,7 @@ import dayjs from 'dayjs'
         birthdayMessagegirl = `距离 ${birthdaygirl.name} 的生日还有${nextBir}天`
     }
      // 获取boy距离下次生日的时间
-     const nextBirboy = dayjs(dayjs().format('YYYY') + '-' + birthdayboy.date).diff(dayjs(), 'day')
+     const nextBirboy = (dayjs(dayjs().format('YYYY') + '-' + birthdayboy.date).diff(dayjs(), 'day') + 365)%365
      if(nextBirboy < 0){
          nextBirboy += 365
      }   
