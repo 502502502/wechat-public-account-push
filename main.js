@@ -1,4 +1,4 @@
-import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, kaoyanMessage,sendMessage, getColor } from './src/services/index.js'
+import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, getKaoyanMessage,sendMessage, getColor } from './src/services/index.js'
 import { config } from './config/index.js'
 import dayjs from 'dayjs'
 import { toLowerLine } from './src/utils/index.js'
