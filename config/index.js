@@ -23,7 +23,7 @@ export const config = {
     marryDate: "2020-01-04"
     //考研时间
     //kaoyanDate:  {"name": "小姑娘", "date": "12-24", "type": 'new'}
-    //}
+    }
 
 // {{date.DATA}}  
 // 城市：{{city.DATA}}  
