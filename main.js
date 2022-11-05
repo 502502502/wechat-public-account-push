@@ -1,4 +1,4 @@
-import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, getKaoyanMessage, getSijiMessage, getSeeMessage, getLoveMessage, sendMessage, getColor } from './src/services/index.js'
+import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, getKaoyanMessage, getSijiMessage, getSeeMessage, getLove1Message, sendMessage, getColor } from './src/services/index.js'
 import { config } from './config/index.js'
 import dayjs from 'dayjs'
 import { toLowerLine } from './src/utils/index.js'
@@ -39,7 +39,7 @@ const main = async () => {
     // 获取见面信息
     const seeMessage = getSeeMessage()
     // 获取恋爱纪念日信息
-    const loveMessage = getLoveMessage()
+    const loveMessage = getLove1Message()
 
 
     // 集成所需信息
