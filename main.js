@@ -1,4 +1,4 @@
-import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, getKaoyanMessage,sendMessage, getColor } from './src/services/index.js'
+import { getAccessToken, getWeather, getCIBA, getBirthdayMessage, getKaoyanMessage, getSijiMessage, getSeeMessage, getLoveMessage, sendMessage, getColor } from './src/services/index.js'
 import { config } from './config/index.js'
 import dayjs from 'dayjs'
 import { toLowerLine } from './src/utils/index.js'
@@ -33,7 +33,13 @@ const main = async () => {
     // 获取生日信息
     const birthdayMessage = getBirthdayMessage()
     // 获取考研信息
-   // const kaoyanMessage = getKaoyanMessage()
+    const kaoyanMessage = getKaoyanMessage()
+    // 获取四级信息
+    const sijiMessage = getSijiMessage()
+    // 获取见面信息
+    const seeMessage = getSeeMessage()
+    // 获取恋爱纪念日信息
+    const loveMessage = getLoveMessage()
 
 
     // 集成所需信息
@@ -50,7 +56,10 @@ const main = async () => {
         { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
         { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
-        //{ name: toLowerLine('kaoyanMessage'), value: kaoyanMessage, color: getColor() },
+        { name: toLowerLine('kaoyanMessage'), value: kaoyanMessage, color: getColor() },
+        { name: toLowerLine('sijiMessage'), value: sijiMessage, color: getColor() },
+        { name: toLowerLine('seeMessage'), value: seeMessage, color: getColor() },
+        { name: toLowerLine('loveMessage'), value: loveMessage, color: getColor() },
         { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
     ]
