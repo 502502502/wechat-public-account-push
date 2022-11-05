@@ -155,10 +155,6 @@ import dayjs from 'dayjs'
     let kaoyandayMessage = null
     // 获取距离考研的时间
     const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
-    // 获取距离出发吉林的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
-    // 获取距离见面的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
         
     if (nextBir === 0) {
         kaoyandayMessage = `今天要 ${kaoyanDate.name} 考研哦，祝${kaoyanDate.name}旗开得胜！`
@@ -168,6 +164,79 @@ import dayjs from 'dayjs'
     // 存储数据
     if (kaoyandayMessage) {
         resMessage += `${kaoyandayMessage} \n`
+    }
+
+    return resMessage
+}
+ /**
+ * 获取四级信息
+ * @returns 
+ */
+ export const getSijiMessage = () => {
+    // 计算倒数
+    const sijiDate = config.sijiDate
+    let resMessage = ''
+    let sijidayMessage = null
+    // 获取距离四级的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + sijiDate.date).diff(dayjs(), 'day')
+  
+        
+    if (nextBir === 0) {
+        sijidayMessage = `今天 ${sijiDate.name} 要考四级咯，祝${sijiDate.name}旗开得胜！`
+    } else if (nextBir > 0 ) {
+        sijidayMessage = `距离 ${sijiDate.name} 考四级还有${nextBir}天，加油加油！`
+    }
+    // 存储数据
+    if (sijidayMessage) {
+        resMessage += `${sijidayMessage} \n`
+    }
+
+    return resMessage
+}
+ /**
+ * 获取见面信息
+ * @returns 
+ */
+ export const getSeeMessage = () => {
+    // 计算倒数
+    const seeDate = config.seeDate
+    let resMessage = ''
+    let seedayMessage = null
+    // 获取距离见面的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + seeDate.date).diff(dayjs(), 'day')
+        
+    if (nextBir === 0) {
+        seedayMessage = `今天 ${seeDate.name} 终于要见面啦！`
+    } else if (nextBir > 0 ) {
+        seedayMessage = `距离 ${seeDate.name} 见面还有${nextBir}天啦，很快咯很快咯`
+    }
+    // 存储数据
+    if (seedayMessage) {
+        resMessage += `${seedayMessage} \n`
+    }
+
+    return resMessage
+}
+ /**
+ * 获取恋爱纪念日信息
+ * @returns 
+ */
+ export const getLoveMessage = () => {
+    // 计算倒数
+    const loveDate = config.loveDate
+    let resMessage = ''
+    let lovedayMessage = null
+    // 获取恋爱纪念日的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + loveDate.date).diff(dayjs(), 'day')
+  
+    if (nextBir === 0) {
+        lovedayMessage = `今天是 ${loveDate.name} 的恋爱周年纪念日哦，祝${loveDate.name}永远都好好的！`
+    } else if (nextBir > 0 ) {
+        lovedayMessage = `距离 ${loveDate.name} 的恋爱周年纪念日还有${nextBir}天，今天也是爱你的呢！`
+    }
+    // 存储数据
+    if (lovedayMessage) {
+        resMessage += `${lovedayMessage} \n`
     }
 
     return resMessage
