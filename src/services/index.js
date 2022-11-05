@@ -221,9 +221,9 @@ import dayjs from 'dayjs'
  * 获取恋爱纪念日信息
  * @returns 
  */
- export const getLoveMessage = () => {
+ export const getLove1Message = () => {
     // 计算倒数
-    const loveDate = config.loveDate
+    const loveDate = config.love1Date
     let resMessage = ''
     let lovedayMessage = null
     // 获取恋爱纪念日的时间
