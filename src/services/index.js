@@ -155,6 +155,10 @@ import dayjs from 'dayjs'
     let kaoyandayMessage = null
     // 获取距离考研的时间
     const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
+    // 获取距离出发吉林的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
+    // 获取距离见面的时间
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
         
     if (nextBir === 0) {
         kaoyandayMessage = `今天要 ${kaoyanDate.name} 考研哦，祝${kaoyanDate.name}旗开得胜！`
