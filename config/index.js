@@ -22,14 +22,11 @@ export const config = {
     // 结婚纪念日
     marryDate: "2020-01-04",
     //考研时间
-    kaoyanDate:  {"name": "小姑娘", "date": "12-24", "type": 'new'}
-    }
+    kaoyanDate:  {"name": "小姑娘", "date": "12-24", "type": 'new'},
     //四级时间
-    sijiDate:  {"name": "小姑娘", "date": "12-10", "type": 'new'}
-    }
+    sijiDate:  {"name": "小姑娘", "date": "12-10", "type": 'new'},
     //见面时间
-    seeDate:  {"name": "我们", "date": "12-27", "type": 'new'}
-    }
+    seeDate:  {"name": "我们", "date": "12-27", "type": 'new'},
     //恋爱纪念日时间
     loveDate:  {"name": "我们", "date": "12-16", "type": 'new'}
     }
