@@ -24,7 +24,7 @@ export const config = {
     //考研时间
     kaoyanDate:  {"name": "小姑娘", "date": "12-24", "type": 'new'},
     //四级时间
-    sijiDate:  {"name": "小姑娘", "date": "12-10", "type": 'new'},
+    sijiDate:  {"name": "小姑娘", "date": "11-6", "type": 'new'},
     //见面时间
     seeDate:  {"name": "我们", "date": "12-27", "type": 'new'},
     //恋爱纪念日时间
