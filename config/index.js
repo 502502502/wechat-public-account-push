@@ -28,10 +28,10 @@ export const config = {
     sijiDate:  {"name": "小姑娘", "date": "12-10", "type": 'new'}
     }
     //见面时间
-    seeDate:  {"name": "我们见面", "date": "12-27", "type": 'new'}
+    seeDate:  {"name": "我们", "date": "12-27", "type": 'new'}
     }
     //恋爱纪念日时间
-    loveDate:  {"name": "我们的恋爱周年纪念日", "date": "12-16", "type": 'new'}
+    loveDate:  {"name": "我们", "date": "12-16", "type": 'new'}
     }
 
 // {{date.DATA}}  
