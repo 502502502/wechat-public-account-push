@@ -5,7 +5,7 @@ export const config = {
     // 公众号appSecret
     appSecret: "526541adbbd6f0de2946b60ad128a1be",
     // 模板消息id
-    templateId: "aR_BLY7VUNG0xqd42xPkvqB-1iestbqI1N9D0kOQnPg",
+    templateId: "qK6Xa0wkaUIeCguzMj9aJOyTwSiGnJlFC3WXXTDLpSI",
     // 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
     user: ["ojxaO6WKQFmoNqFaekZ1yQWIFmEo", "ojxaO6ZWEzhue7CHioEnTgAy8xG4"],
      
@@ -28,7 +28,7 @@ export const config = {
     //见面时间
     seeDate:  {"name": "我们", "date": "12-27", "type": 'new'},
     //恋爱纪念日时间
-    loveDate:  {"name": "我们", "date": "12-16", "type": 'new'}
+    love1Date:  {"name": "我们", "date": "12-16", "type": 'new'}
     }
 
 // {{date.DATA}}  
