@@ -232,7 +232,7 @@ import dayjs from 'dayjs'
     if (nextBir === 0) {
         lovedayMessage = `今天是 ${loveDate.name} 的恋爱周年纪念日哦，祝${loveDate.name}永远都好好的！`
     } else if (nextBir > 0 ) {
-        lovedayMessage = `距离 ${loveDate.name} 的恋爱周年纪念日还有${nextBir}天，今天也是爱你的呢！`
+        lovedayMessage = `距离 ${loveDate.name} 的恋爱周年纪念日还有${nextBir}天`
     }
     // 存储数据
     if (lovedayMessage) {
