@@ -11,6 +11,9 @@ const main = async () => {
     // 省份和市
     const province = config.province
     const city = config.city
+    // 省份和市
+    const provinceboy = config.province
+    const cityboy = config.city
     // 获取每日天气
     const {
         // 天气
@@ -24,6 +27,19 @@ const main = async () => {
         // 风力等级
         ws: windScale
     } = await getWeather(province, city)
+    // 获取每日天气
+    const {
+        // 天气
+        weatherboy,
+        // 最高温度
+        temp: maxTemperatureboy, 
+        // 最低温度
+        tempn: minTemperatureboy,
+        // 风向
+        wd: windDirectionboy,
+        // 风力等级
+        ws: windScaleboy
+    } = await getWeather(provinceboy, cityboy)
     // 获取金山词霸每日一句
     const { content: noteCh, note: noteEn } = await getCIBA()
     // 获取在一起的日期差
@@ -53,6 +69,13 @@ const main = async () => {
         { name: toLowerLine('maxTemperature'), value: maxTemperature, color: getColor() },
         { name: toLowerLine('windDirection'), value: windDirection, color: getColor() },
         { name: toLowerLine('windScale'), value: windScale, color: getColor() },
+        { name: toLowerLine('provinceboy'), value: provinceboy, color: getColor() },
+        { name: toLowerLine('cityboy'), value: cityboy, color: getColor() },
+        { name: toLowerLine('weatherboy'), value: weatherboy, color: getColor() },
+        { name: toLowerLine('minTemperatureboy'), value: minTemperatureboy, color: getColor() },
+        { name: toLowerLine('maxTemperatureboy'), value: maxTemperatureboy, color: getColor() },
+        { name: toLowerLine('windDirectionboy'), value: windDirectionboy, color: getColor() },
+        { name: toLowerLine('windScaleboy'), value: windScaleboy, color: getColor() },
         { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
         { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
