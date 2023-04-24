@@ -115,7 +115,7 @@ import dayjs from 'dayjs'
     let birthdayMessagegirl = null
     let birthdayMessageboy = null
     // 获取girl距离下次生日的时间
-    const nextBir = (dayjs(dayjs().format('YYYY') + '-' + birthdaygirl.date).diff(dayjs(), 'day') + 365)%365
+    const nextBir = (dayjs(dayjs().format('YYYY') + '-' + birthdaygirl.date).diff(dayjs(), 'day') + 365)%365 +1
         
     if (nextBir === 0) {
         birthdayMessagegirl = `今天是 ${birthdaygirl.name} 生日哦，祝${birthdaygirl.name}生日快乐！`
@@ -123,7 +123,7 @@ import dayjs from 'dayjs'
         birthdayMessagegirl = `距离 ${birthdaygirl.name} 的生日还有${nextBir}天`
     }
      // 获取boy距离下次生日的时间
-     const nextBirboy = (dayjs(dayjs().format('YYYY') + '-' + birthdayboy.date).diff(dayjs(), 'day') + 365)%365
+     const nextBirboy = (dayjs(dayjs().format('YYYY') + '-' + birthdayboy.date).diff(dayjs(), 'day') + 365)%365 +1
      if(nextBirboy < 0){
          nextBirboy += 365
      }   
@@ -154,7 +154,7 @@ import dayjs from 'dayjs'
     let resMessage = ''
     let kaoyandayMessage = null
     // 获取距离考研的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + kaoyanDate.date).diff(dayjs(), 'day')+1
         
     if (nextBir === 0) {
         kaoyandayMessage = `今天要 ${kaoyanDate.name} 考研哦，祝${kaoyanDate.name}旗开得胜！`
@@ -178,7 +178,7 @@ import dayjs from 'dayjs'
     let resMessage = ''
     let sijidayMessage = null
     // 获取距离四级的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + sijiDate.date).diff(dayjs(), 'day')
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + sijiDate.date).diff(dayjs(), 'day')+1
   
         
     if (nextBir === 0) {
@@ -203,7 +203,7 @@ import dayjs from 'dayjs'
     let resMessage = ''
     let seedayMessage = null
     // 获取距离见面的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + seeDate.date).diff(dayjs(), 'day')
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + seeDate.date).diff(dayjs(), 'day')+1
         
     if (nextBir === 0) {
         seedayMessage = `今天 ${seeDate.name} 终于要见面啦！`
@@ -227,7 +227,7 @@ import dayjs from 'dayjs'
     let resMessage = ''
     let lovedayMessage = null
     // 获取恋爱纪念日的时间
-    const nextBir = dayjs(dayjs().format('YYYY') + '-' + loveDate.date).diff(dayjs(), 'day')
+    const nextBir = dayjs(dayjs().format('YYYY') + '-' + loveDate.date).diff(dayjs(), 'day') +1
   
     if (nextBir === 0) {
         lovedayMessage = `今天是 ${loveDate.name} 的恋爱周年纪念日哦，祝${loveDate.name}永远都好好的！`
