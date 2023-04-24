@@ -74,6 +74,50 @@ import dayjs from 'dayjs'
         return null
     }
 }
+ 
+ /**
+ * 获取天气情况
+ * @param {*} provinceboy 省份
+ * @param {*} cityboy 城市
+ */
+ export const getWeatherboy = async (provinceboy, cityboy) => {
+    if (!cityInfo[provinceboy] || !cityInfo[provinceboy][cityboy] || !cityInfo[provinceboy][cityboy]["AREAID"]) {
+        console.error('配置文件中找不到相应的省份或城市')
+        return null
+    }
+    const address = cityInfo[provinceboy][cityboy]["AREAID"]
+
+    const url = `http://d1.weather.com.cn/dingzhi/${address}.html?_=${new Date()}` 
+
+    const res = await axios.get(url, {
+        headers: {
+            "Referer": `http://www.weather.com.cn/weather1d/${address}.shtml`,
+            'User-Agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36`
+        }
+    }).catch(err => err)
+
+    try {
+        if (res.status === 200 && res.data) {
+            const temp = res.data.split(";")[0].split("=")
+            const weatherStr = temp[temp.length - 1]
+            const weather = JSON.parse(weatherStr)
+            if (weather.weatherinfo) {
+                return weather.weatherinfo
+            } else {
+                throw new Error ('找不到weatherinfo属性, 获取失败')
+            }
+        } else {
+            throw new Error(res)
+        }
+    } catch(e) {
+        if (e instanceof SyntaxError ) {
+            console.error('序列化错误', e)
+        } else {
+            console.error(e)
+        }
+        return null
+    }
+}
 
 /**
  * 金山词霸每日一句
