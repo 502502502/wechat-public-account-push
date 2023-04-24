@@ -90,7 +90,7 @@ import dayjs from 'dayjs'
     }).catch(err => err)
 
     if (res.status === 200 && res) {
-        return res.data+"\n"
+        return res.data
     }
     console.error('发生错误', res)
     return null
