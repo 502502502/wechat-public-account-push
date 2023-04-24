@@ -28,7 +28,7 @@ export const config = {
     //四级时间
     sijiDate:  {"name": "小可爱", "date": "12-10", "type": 'new'},
     //见面时间
-    seeDate:  {"name": "我们", "date": "4-30", "type": 'new'},
+    seeDate:  {"name": "我们", "date": "4-29", "type": 'new'},
     //恋爱纪念日时间
     love1Date:  {"name": "我们", "date": "12-16", "type": 'new'}
     }
