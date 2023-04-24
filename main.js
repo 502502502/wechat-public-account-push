@@ -41,7 +41,7 @@ const main = async () => {
         ws: windScaleboy
     } = await getWeather(provinceboy, cityboy)
     // 获取金山词霸每日一句
-    const { content: noteCh, note: noteEn } = await getCIBA()
+    const { content: noteCh +"\n", note: noteEn+"\n" } = await getCIBA()
     // 获取在一起的日期差
     const loveDay = dayjs().diff(dayjs(config.loveDate), 'day')
     // 获取结婚的日期差
@@ -83,7 +83,7 @@ const main = async () => {
         { name: toLowerLine('sijiMessage'), value: sijiMessage, color: getColor() },
         { name: toLowerLine('seeMessage'), value: seeMessage, color: getColor() },
         { name: toLowerLine('loveMessage'), value: loveMessage, color: getColor() },
-        { name: toLowerLine('noteEn'), value: noteEn+"\n", color: getColor() },
+        { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
     ]
     // 公众号推送消息
