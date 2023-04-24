@@ -80,7 +80,7 @@ import dayjs from 'dayjs'
  * @param {*} provinceboy 省份
  * @param {*} cityboy 城市
  */
- export const getWeather = async (provinceboy, cityboy) => {
+ export const getWeatherboy = async (provinceboy, cityboy) => {
     if (!cityInfo[provinceboy] || !cityInfo[provinceboy][cityboy] || !cityInfo[provinceboy][cityboy]["AREAID"]) {
         console.error('配置文件中找不到相应的省份或城市')
         return null
