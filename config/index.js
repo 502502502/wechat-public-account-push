@@ -12,8 +12,10 @@ export const config = {
     // 信息配置
     // 所在省份
     province: "广西",
+    provinceboy:"吉林"
     // 所在城市
-    city: "钦州",
+    city: "柳州",
+    cityboy: "长春"
     // 生日，修改名字为对应需要显示的名字，如果生日为农历， type为 r
     birthdaygirl: {"name": "小姑娘", "year": "2000", "date": "10-20", "type": 'new'},
     birthdayboy: {"name": "小伙", "year": "2001", "date": "05-06", "type": 'new'},
@@ -26,7 +28,7 @@ export const config = {
     //四级时间
     sijiDate:  {"name": "小姑娘", "date": "12-10", "type": 'new'},
     //见面时间
-    seeDate:  {"name": "我们", "date": "12-27", "type": 'new'},
+    seeDate:  {"name": "我们", "date": "4-29", "type": 'new'},
     //恋爱纪念日时间
     love1Date:  {"name": "我们", "date": "12-16", "type": 'new'}
     }
