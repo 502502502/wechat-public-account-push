@@ -56,7 +56,8 @@ const main = async () => {
     const seeMessage = getSeeMessage()
     // 获取恋爱纪念日信息
     const loveMessage = getLove1Message()
-
+     // 获取情话
+    const dayMessage = "今天我也很想你呀，亲爱的小可爱~ \n\n 今天比昨天更漂亮了哦，嘎嘎喜欢呢~\n\n"
 
     // 集成所需信息
     const week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
@@ -76,13 +77,14 @@ const main = async () => {
         { name: toLowerLine('maxTemperatureboy'), value: maxTemperatureboy, color: getColor() },
         { name: toLowerLine('windDirectionboy'), value: windDirectionboy, color: getColor() },
         { name: toLowerLine('windScaleboy'), value: windScaleboy, color: getColor() },
-        { name: toLowerLine('loveDay'), value: loveDay, color: getColor() },
+        { name: toLowerLine('loveDay'), value: "今天是我们在一起的第"+loveDay+"天哦~\n", color: getColor() },
         { name: toLowerLine('marryDay'), value: marryDay, color: getColor() },
         { name: toLowerLine('birthdayMessage'), value: birthdayMessage, color: getColor() },
         { name: toLowerLine('kaoyanMessage'), value: kaoyanMessage, color: getColor() },
         { name: toLowerLine('sijiMessage'), value: sijiMessage, color: getColor() },
         { name: toLowerLine('seeMessage'), value: seeMessage, color: getColor() },
         { name: toLowerLine('loveMessage'), value: loveMessage, color: getColor() },
+        { name: toLowerLine('dayMessage'), value: dayMessage, color: getColor() },
         { name: toLowerLine('noteEn'), value: noteEn+"\n", color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh+"\n", color: getColor() },
     ]
