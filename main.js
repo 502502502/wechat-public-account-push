@@ -12,8 +12,8 @@ const main = async () => {
     const province = config.province
     const city = config.city
     // 省份和市
-    const provinceboy = config.province
-    const cityboy = config.city
+    const provinceboy = config.provinceboy
+    const cityboy = config.cityboy
     // 获取每日天气
     const {
         // 天气
