@@ -90,7 +90,7 @@ import dayjs from 'dayjs'
     }).catch(err => err)
 
     if (res.status === 200 && res) {
-        return res.data
+        return res.data+"\n"
     }
     console.error('发生错误', res)
     return null
@@ -136,10 +136,10 @@ import dayjs from 'dayjs'
      }
     // 存储数据
     if (birthdayMessagegirl) {
-        resMessage += `${birthdayMessagegirl} \n`
+        resMessage += `${birthdayMessagegirl} \n\n`
     }
     if (birthdayMessageboy) {
-        resMessage += `${birthdayMessageboy} \n`
+        resMessage += `${birthdayMessageboy} \n\n`
     }
 
     return resMessage
@@ -164,7 +164,7 @@ import dayjs from 'dayjs'
     }
     // 存储数据
     if (kaoyandayMessage) {
-        resMessage += `${kaoyandayMessage} \n`
+        resMessage += `${kaoyandayMessage} \n\n`
     }
 
     return resMessage
@@ -189,7 +189,7 @@ import dayjs from 'dayjs'
     }
     // 存储数据
     if (sijidayMessage) {
-        resMessage += `${sijidayMessage} \n`
+        resMessage += `${sijidayMessage} \n\n`
     }
 
     return resMessage
@@ -209,11 +209,11 @@ import dayjs from 'dayjs'
     if (nextBir === 0) {
         seedayMessage = `今天 ${seeDate.name} 终于要见面啦！`
     } else if (nextBir > 0 ) {
-        seedayMessage = `距离 ${seeDate.name} 见面还有${nextBir}天啦，很快咯很快咯`
+        seedayMessage = `距离 ${seeDate.name} 见面还有${nextBir}天啦，很快啦`
     }
     // 存储数据
     if (seedayMessage) {
-        resMessage += `${seedayMessage} \n`
+        resMessage += `${seedayMessage} \n\n`
     }
 
     return resMessage
@@ -237,7 +237,7 @@ import dayjs from 'dayjs'
     }
     // 存储数据
     if (lovedayMessage) {
-        resMessage += `${lovedayMessage} \n`
+        resMessage += `${lovedayMessage} \n\n`
     }
 
     return resMessage
