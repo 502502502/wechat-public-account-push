@@ -17,7 +17,7 @@ const main = async () => {
     // 获取每日天气
     const {
         // 天气
-        weather,
+        weather: weather,
         // 最高温度
         temp: maxTemperature, 
         // 最低温度
@@ -30,7 +30,7 @@ const main = async () => {
     // 获取每日天气
     const {
         // 天气
-        weatherboy,
+        weather: weatherboy,
         // 最高温度
         temp: maxTemperatureboy, 
         // 最低温度
