@@ -83,7 +83,7 @@ const main = async () => {
         { name: toLowerLine('sijiMessage'), value: sijiMessage, color: getColor() },
         { name: toLowerLine('seeMessage'), value: seeMessage, color: getColor() },
         { name: toLowerLine('loveMessage'), value: loveMessage, color: getColor() },
-        { name: toLowerLine('noteEn'), value: noteEn, color: getColor() },
+        { name: toLowerLine('noteEn'), value: noteEn+"\n", color: getColor() },
         { name: toLowerLine('noteCh'), value: noteCh, color: getColor() },
     ]
     // 公众号推送消息
